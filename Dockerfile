@@ -14,8 +14,7 @@ RUN apt-get update && apt-get install -y \
        unzip \
        libxml2-dev \
        libicu-dev \
-       libexif-dev \
-       default-mysql-client 
+       libexif-dev 
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
        && docker-php-ext-install gd pdo pdo_mysql zip mysqli intl exif  
@@ -28,9 +27,6 @@ COPY . .
 
 # Install application dependencies using Composer
 RUN composer update
-
-# Import the SQL database 
-RUN mysql -u marolix -p ecommerce_marolix < ecommerce_marolix.sql
 
 # Expose port 9000 for PHP-FPM
 EXPOSE 9000
