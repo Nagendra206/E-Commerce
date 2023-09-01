@@ -12,9 +12,10 @@ RUN apt-get update && apt-get install -y \
        libzip-dev \
        zip \
        unzip \
-       libxml2-dev \  
+       libxml2-dev \
        libicu-dev \
-       libexif-dev
+       libexif-dev \
+       mysql-client
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
        && docker-php-ext-install gd pdo pdo_mysql zip mysqli intl exif   
