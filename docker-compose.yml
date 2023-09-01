@@ -14,7 +14,7 @@ services:
   db:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: marolix
+      MYSQL_ROOT_PASSWORD: Ecommercemarolix
       MYSQL_DATABASE: ecommerce_marolix
       MYSQL_USER: marolix
-      MYSQL_PASSWORD: marolix
+      MYSQL_PASSWORD: Ecommercemarolix
