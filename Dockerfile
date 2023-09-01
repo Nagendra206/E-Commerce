@@ -9,10 +9,10 @@ RUN apt-get update && apt-get install -y \
        libpng-dev \
        libjpeg-dev \
        libfreetype6-dev \
-       libzip-dev \ 
+       libzip-dev \
        zip \
-       unzip
-       libxml2-dev \
+       unzip \
+       libxml2-dev \  
        libicu-dev \
        libexif-dev
 
