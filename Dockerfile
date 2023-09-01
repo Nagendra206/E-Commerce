@@ -12,9 +12,12 @@ RUN apt-get update && apt-get install -y \
        libzip-dev \ 
        zip \
        unzip
+       libxml2-dev \
+       libicu-dev \
+       libexif-dev
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-       && docker-php-ext-install gd pdo pdo_mysql zip   
+       && docker-php-ext-install gd pdo pdo_mysql zip mysqli intl exif   
 
 # Install Composer globally
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
