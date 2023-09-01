@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
        libpng-dev \
        libjpeg-dev \
        libfreetype6-dev \
-       libzip-dev \  # Add libzip-dev for libzip support
+       libzip-dev \ 
        zip \
        unzip
 
